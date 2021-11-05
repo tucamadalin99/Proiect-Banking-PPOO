@@ -216,6 +216,8 @@ public class Menu {
         input.close();
         System.out.println("--- Datele au fost actualizate in fisier ----");
         JSONUtils.writeToJSON(bank.getUsers());
+        System.out.println("--- Un raport financiar a fost creat --");
+        bank.generateFileReport();
     }
 
 }
