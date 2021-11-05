@@ -13,11 +13,12 @@ public class Menu {
                 "Str.Sudului, nr.8, Cartier Berceni, Bucuresti"
         );
         try {
-            bank.setMoney(150000.0, 200000.0, 300000.0);
+            bank.setMoney(0.0, 0.0, 0.0);
         } catch (Exception e) {
             e.printStackTrace();
         }
         JSONUtils.readFromJSON(bank);
+        bank.setTotalStash();
         User.counter = bank.getUsers() != null ? bank.getUsers().size() : 0;
         System.out.println("Bine ati venit la aplicatia de e-banking " + bank.getName());
         System.out.println("--------------------------------------------------------");

@@ -102,6 +102,20 @@ public class Bank {
         return null;
     }
 
+    public void setTotalStash(){
+        if(this.accountTypesStash == null){
+            this.accountTypesStash = new HashMap<>();
+        }
+        double totalCredit = getAllMoneyByType(BankAccountType.Credit);
+        double totalDebit = getAllMoneyByType(BankAccountType.Debit);
+        double totalEconomy = getAllMoneyByType(BankAccountType.Economy);
+        double total = totalCredit + totalDebit + totalEconomy;
+        this.accountTypesStash.put("credit", totalCredit);
+        this.accountTypesStash.put("debit", totalDebit);
+        this.accountTypesStash.put("economii", totalEconomy);
+        this.accountTypesStash.put("total", total);
+    }
+
     public double getAllMoneyByType(BankAccountType type){
         double total = 0.0;
         for(User user : this.users){
@@ -115,19 +129,15 @@ public class Bank {
     }
 
     public void generateFileReport(){
-        double totalCredit = getAllMoneyByType(BankAccountType.Credit);
-        double totalDebit = getAllMoneyByType(BankAccountType.Debit);
-        double totalEconomy = getAllMoneyByType(BankAccountType.Economy);
-        double total = totalCredit + totalDebit + totalEconomy;
         try{
             File file = new File("bankReport.txt");
             FileWriter fw = new FileWriter(file.getAbsoluteFile());
             BufferedWriter bw = new BufferedWriter(fw);
             bw.write("--- Suma totala a banilor depusi in banca pe categorii ---\n");
-            bw.write("Total Credit depus: " + totalCredit + " RON" + "\n");
-            bw.write("Total Debit depus: " + totalDebit + " RON" + "\n");
-            bw.write("Total Economii depuse: " + totalEconomy + " RON" + "\n");
-            bw.write("Total tot: " + total + " RON" + "\n");
+            bw.write("Total Credit depus: " + this.accountTypesStash.get("credit") + " RON" + "\n");
+            bw.write("Total Debit depus: " + this.accountTypesStash.get("debit") + " RON" + "\n");
+            bw.write("Total Economii depuse: " + this.accountTypesStash.get("economii") + " RON" + "\n");
+            bw.write("Total tot: " + this.accountTypesStash.get("total") + " RON" + "\n");
             bw.close();
         }catch (Exception ex){
             ex.printStackTrace();
