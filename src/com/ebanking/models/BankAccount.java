@@ -72,8 +72,7 @@ public class BankAccount {
 
     @Override
     public String toString() {
-        return "Cont Bancar --" +
-                "Tip cont:" + type +
+        return "Cont Bancar: " + type +
                 ", Sold: " + balance + " lei" +
                 ", Nume Detinator: '" + holderName + '\'' +
                 ", Prenume Detinator:'" + holderSurname + '\'' +
