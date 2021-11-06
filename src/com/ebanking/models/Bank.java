@@ -143,4 +143,27 @@ public class Bank {
             ex.printStackTrace();
         }
     }
+
+    public void generateUsersReport(){
+        try{
+            User[] users = this.users.toArray(new User[0]);
+            File file = new File("usersReport.txt");
+            FileWriter fw = new FileWriter(file.getAbsoluteFile());
+            BufferedWriter bw = new BufferedWriter(fw);
+            bw.write("--- Raport Financiar Clienti ---\n");
+            for(int i = 0; i < users.length; i++){
+                bw.write("\nEmail Client: " + users[i].getEmail());
+                bw.write("\nTelefon Client: " + users[i].getPhone());
+                double total = 0;
+                for(BankAccount acc : users[i].getAccounts()){
+                    total += acc.getBalance();
+                }
+                bw.write("\nSuma totala depusa: " + total + " RON");
+                bw.write("\n");
+            }
+            bw.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 }

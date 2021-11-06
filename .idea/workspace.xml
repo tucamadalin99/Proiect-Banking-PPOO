@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d660d5a2-3918-4699-8eee-846821560719" name="Changes" comment="Finished final final">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentatie_Proiect_PPOO_Tema1_Tuca_Madalin.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Documentatie_Proiect_PPOO_Tema1_Tuca_Madalin.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Banking-1_Tuca_Madalin_1111/com/ebanking/models/Bank.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Banking-1_Tuca_Madalin_1111/com/ebanking/models/Bank.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Banking-1_Tuca_Madalin_1111/com/ebanking/utils/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Banking-1_Tuca_Madalin_1111/com/ebanking/utils/Menu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ebanking/models/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ebanking/models/Bank.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ebanking/utils/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ebanking/utils/Menu.java" afterDir="false" />
     </list>
@@ -201,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636142883897</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Finished final final">
+      <created>1636144856723</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1636144856723</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

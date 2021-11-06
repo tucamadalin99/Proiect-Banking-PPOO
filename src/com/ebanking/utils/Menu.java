@@ -219,6 +219,7 @@ public class Menu {
         JSONUtils.writeToJSON(bank.getUsers());
         System.out.println("--- Un raport financiar a fost creat --");
         bank.generateFileReport();
+        bank.generateUsersReport();
     }
 
 }
